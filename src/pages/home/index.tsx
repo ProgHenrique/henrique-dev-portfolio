@@ -21,10 +21,10 @@ export default function Home(){
                     <h1>Henrique Ramos</h1>
                     <h2>&gt; Full-stack developer</h2>
                     <HeroTextFooter>
-                        <p>// complete o jogo para continuar</p>
-                        <p>// veja isso no meu Github</p>
+                        <p>{'// complete o jogo para continuar'}</p>
+                        <p>{'// veja isso no meu Github'}</p>
                         <p>
-                            <span>const</span> <span>githubLink</span> = <span>“</span><a href="https://github.com/ProgHenrique" target="_blank">https://github.com/ProgHenrique</a><span>"</span>
+                            <span>const</span> <span>githubLink</span> = <span>“</span><a href="https://github.com/ProgHenrique" target="_blank">https://github.com/ProgHenrique</a><span>`&quot;`</span>
                         </p>
                     </HeroTextFooter>
                 </HeroText>
@@ -40,8 +40,8 @@ export default function Home(){
                     <ConsoleMenu>
                         <Controller>
                             <p>
-                            // use keyboard <br/>
-                            // arrows to play
+                            {'// use keyboard'} <br/>
+                            {'// arrows to play'}
                             </p>
 
                             <ArrowsBoard>
@@ -58,12 +58,12 @@ export default function Home(){
                             </ArrowsBoard>
                         </Controller>
                         <FoodScore>
-                            <p>// food left</p>
+                            <p>{'// food left'}</p>
                             <FoodScoreBoard>
                                 {arrayFood.map((item, index) => {
                                     const setOpacity = index < score ? 1: 0.3
                                     return (
-                                     <Food css={{opacity: setOpacity}} />
+                                     <Food key={item} css={{opacity: setOpacity}} />
                                     )
                                 })}
                             </FoodScoreBoard>

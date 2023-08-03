@@ -176,7 +176,7 @@ export default function Projects() {
       return [... new Set(projectsFilter)]
     })
     setChecks([...techsChecked])
-  },[techs])
+  },[projects, techs])
 
   return (
     <>
@@ -240,8 +240,8 @@ export default function Projects() {
             {/* show filtered on screen */}
             {projectsData.map((project, index) => {
               return (
-                <Card>
-                  <p><strong>Projeto {index + 1}</strong> // {project.name}</p>
+                <Card key={index}>
+                  <p><strong>Projeto {index + 1}</strong> {'//'} {project.name}</p>
                   <CardContent>
                     <Img 
                       src={`/images/${project.image}`}

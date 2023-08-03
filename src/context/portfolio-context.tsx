@@ -1,4 +1,4 @@
-import { Dispatch, ReactNode, SetStateAction, createContext, useEffect, useState } from "react";
+import { Dispatch, ReactNode, SetStateAction, createContext, useCallback, useEffect, useState } from "react";
 
 interface Trail {
   x: number;
@@ -64,18 +64,6 @@ export function PortfolioProvider({children}: PortfolioProviderProps) {
   const amountSquaresOnStage = {x:24, y:40}
   const speed = 1
 
-  useEffect(() => {
-    if(gameStart) {
-      document.addEventListener('keydown', handleKeyPress);
-      const gameLoop = setInterval(game, 60);
-      return () => {
-        document.removeEventListener('keydown', handleKeyPress);
-        clearInterval(gameLoop);
-      };
-    }
-    
-  }, [snake, gameStart]);
-
   // when direction change callback function that change direction of the snake
   useEffect(()=> {
     if(direction) {
@@ -83,7 +71,7 @@ export function PortfolioProvider({children}: PortfolioProviderProps) {
     }
   },[direction])
 
-  function game () {
+  const game = useCallback(()=> {
     initial.x += speedDirection.x
     initial.y += speedDirection.y
     // check whether snake is out of table-game
@@ -130,8 +118,8 @@ export function PortfolioProvider({children}: PortfolioProviderProps) {
         y: Math.floor(Math.random()*amountSquaresOnStage.y)
       })
     }
-  }
-
+  }, [amountSquaresOnStage.x, amountSquaresOnStage.y, initial, positionFood.x, positionFood.y, score, snake, speedDirection.x, speedDirection.y, tail])
+  
   // change snake direction
   function moveSnake (snakeDirection: "up" | "down" | "left" | "right") {
     switch (snakeDirection) {
@@ -152,8 +140,8 @@ export function PortfolioProvider({children}: PortfolioProviderProps) {
     }
   }
 
-  //change useState direction when press arrow keys
-  function handleKeyPress (event: KeyboardEvent) {
+   //change useState direction when press arrow keys
+  const handleKeyPress = useCallback((event: KeyboardEvent)=> {
     switch (event.key) {
       case 'ArrowLeft':
         if(direction !== 'right'){
@@ -181,7 +169,19 @@ export function PortfolioProvider({children}: PortfolioProviderProps) {
       default:
         break;
     }
-  }
+  },[direction])
+
+  useEffect(() => {
+    if(gameStart) {
+      document.addEventListener('keydown', handleKeyPress);
+      const gameLoop = setInterval(game, 60);
+      return () => {
+        document.removeEventListener('keydown', handleKeyPress);
+        clearInterval(gameLoop);
+      };
+    }
+    
+  }, [snake, gameStart, handleKeyPress, game]);
 
 
   return (

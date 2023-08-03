@@ -8,6 +8,7 @@ export const globalStyles = globalCss({
   },
 
   body: {
+    fontFamily: "'Fira Code', monospace",
     backgroundColor: '$gray800',
     color: '$gray100',
     '-webkit-font-smoothing': 'antialiased',

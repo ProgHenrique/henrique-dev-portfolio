@@ -108,16 +108,16 @@ export default function Contacts() {
         </ColumnContent>
         
         <CodeView>
-          <p><span>&nbsp;1</span><span style={{color: '#C98BDF'}}>const</span> <span style={{color: '#5565E8'}}>button</span> = <span style={{color: '#5565E8'}}>document</span>.<span style={{color: '#5565E8'}}>querySelector</span>(<span style={{color: '#FEA55F'}}>'#sendBtn'</span>);</p>
+          <p><span>&nbsp;1</span><span style={{color: '#C98BDF'}}>const</span> <span style={{color: '#5565E8'}}>button</span> = <span style={{color: '#5565E8'}}>document</span>.<span style={{color: '#5565E8'}}>querySelector</span>(<span style={{color: '#FEA55F'}}>&apos;#sendBtn&apos;</span>);</p>
           <p><span>&nbsp;2</span></p>
           <p><span>&nbsp;3</span><span style={{color: '#C98BDF'}}>const</span> <span style={{color: '#5565E8'}}>message</span>  = {'{'}</p>
-          <p><span>&nbsp;4</span> &nbsp;<span style={{color: '#5565E8'}}>name</span>: <span style={{color: '#FEA55F'}}>"{nameValue}"</span>,</p>
-          <p><span>&nbsp;5</span> &nbsp;<span style={{color: '#5565E8'}}>email</span>: <span style={{color: '#FEA55F'}}>"{emailValue}"</span>,</p>
-          <p><span>&nbsp;6</span> &nbsp;<span style={{color: '#5565E8'}}>message</span>: <span style={{color: '#FEA55F'}}>"{messageValue}"</span>,</p>
-          <p><span>&nbsp;7</span> &nbsp;<span style={{color: '#5565E8'}}>date</span>: <span style={{color: '#FEA55F'}}>"{format(new Date(), "EEEE dd 'de' MMMM", {locale: ptBR})}"</span>,</p>
+          <p><span>&nbsp;4</span> &nbsp;<span style={{color: '#5565E8'}}>name</span>: <span style={{color: '#FEA55F'}}>&quot;{nameValue}&quot;</span>,</p>
+          <p><span>&nbsp;5</span> &nbsp;<span style={{color: '#5565E8'}}>email</span>: <span style={{color: '#FEA55F'}}>&quot;{emailValue}&quot;</span>,</p>
+          <p><span>&nbsp;6</span> &nbsp;<span style={{color: '#5565E8'}}>message</span>: <span style={{color: '#FEA55F'}}>&quot;{messageValue}&quot;</span>,</p>
+          <p><span>&nbsp;7</span> &nbsp;<span style={{color: '#5565E8'}}>date</span>: <span style={{color: '#FEA55F'}}>&quot;{format(new Date(), "EEEE dd 'de' MMMM", {locale: ptBR})}&quot;</span>,</p>
           <p><span>&nbsp;8</span>{'}'}</p>
           <p><span>&nbsp;9</span></p>
-          <p><span>10</span><span style={{color: '#5565E8'}}>button</span>.<span style={{color: '#5565E8'}}>addEventListener</span>{"("}<span style={{color: '#FEA55F'}}>'click'</span>, () <span style={{color: '#C98BDF'}}>{"=>"}</span> {"{"}</p>
+          <p><span>10</span><span style={{color: '#5565E8'}}>button</span>.<span style={{color: '#5565E8'}}>addEventListener</span>{"("}<span style={{color: '#FEA55F'}}>&apos;click&apos;</span>, () <span style={{color: '#C98BDF'}}>{"=>"}</span> {"{"}</p>
           <p><span>11</span> &nbsp;<span style={{color: '#5565E8'}}>form</span>.<span style={{color: '#5565E8'}}>send</span>(<span style={{color: '#5565E8'}}>message</span>);</p>
           <p><span>12</span>{"})"}</p>
         </CodeView>

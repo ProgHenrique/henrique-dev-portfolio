@@ -34,7 +34,6 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@rocketseat/eslint-config": "^2.1.0",
     "@types/nodemailer": "^6.4.9"
   }
 }
