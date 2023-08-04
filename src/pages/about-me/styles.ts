@@ -9,7 +9,8 @@ export const Section = styled('section', {
 })
 
 export const AccordionContainer = styled('div', {
-  width: 323,
+  maxWidth: '20.196428571rem',
+  width: '100%',
   height: '100%',
   paddingLeft: 8,
   paddingTop: '1.125rem',
@@ -39,7 +40,7 @@ export const AccordionHeader = styled(Accordion.Header, {
 
 export const AccordionTrigger = styled(Accordion.Trigger, {
   all: 'unset',
-  height: 30,
+  height: '1.875rem',
   flex: 1,
   display: 'flex',
   alignItems: 'center',
@@ -120,7 +121,7 @@ const slideUp = keyframes({
 
 export const AccordionContent = styled(Accordion.Content, {
   overflow: 'hidden',
-  backgroundColor: '$gray400',
+  backgroundColor: 'transparent',
 
   '& > div:last-child': {
     p: {
@@ -164,7 +165,7 @@ export const AccordionContentText = styled('div', {
 })
 
 export const ColumnContent = styled('div', {
-  maxWidth: 700,
+  maxWidth: '43.75rem',
   width: '100%',
   height: '100%',
   borderRight: '1px solid $gray200',
@@ -172,7 +173,7 @@ export const ColumnContent = styled('div', {
   '& > div:first-child': {
     display: 'flex',
     width: '100%',
-    height: 40,
+    height: '2.5rem',
     borderBottom: '1px solid $gray200',
   }
 })
@@ -180,7 +181,7 @@ export const ColumnContent = styled('div', {
 export const ColumnContentTitle = styled('div', {
   position: 'relative',
   display: 'flex',
-  maxWidth: 218,
+  maxWidth: '13.625rem',
   gap: '1rem',
   height: '100%',
   padding: '0.625rem 0.75rem',
@@ -214,8 +215,8 @@ export const ColumnContentTitle = styled('div', {
   i: {
     color: '$text',
     cursor: 'pointer',
-    width: 18,
-    height: 18,
+    width: '1.125rem',
+    height: '1.125rem',
     fontSize: '$lg',
   }
 })

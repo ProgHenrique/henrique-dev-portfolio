@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { AccordionContainer, AccordionContent, AccordionContentText, AccordionHeader, AccordionItem, AccordionRoot, AccordionTrigger, CodeView, ColumnContent, Form, FormAnnotation, Input, Label, Section, SucessMessage, TextArea } from "./styles";
+import { AccordionContainer, AccordionContent, AccordionContentText, AccordionHeader, AccordionItem, AccordionRoot, AccordionTrigger, CodeView, ColumnContent, Form, FormAnnotation, Input, Label, Section, SuccessMessage, TextArea } from "./styles";
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { firstLetterUppercase } from "@/utils/first-letter-upper-case";
@@ -80,11 +80,11 @@ export default function Contacts() {
 
         <ColumnContent>
           {isEmailSend
-            ? <SucessMessage>
+            ? <SuccessMessage>
                 <h2>OBRIGADO! 🤘</h2>
-                <p>Sua mensagem foi recebida. Você receberar uma resposta em breve!</p>
+                <p>Sua mensagem foi recebida. Você receberá uma resposta em breve!</p>
                 <Button onClick={()=> setIsEmailSend(false)} color="gray">send-new-message</Button>
-              </SucessMessage> 
+              </SuccessMessage> 
             : <Form as='form' onSubmit={handleSubmit(handleSendEmail)}>
                 <Label>
                   <span>_nome: {errors.name ? <FormAnnotation>* {errors.name.message}</FormAnnotation>: ''}</span>

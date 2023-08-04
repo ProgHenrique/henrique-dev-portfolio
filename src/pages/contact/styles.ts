@@ -9,7 +9,8 @@ export const Section = styled('section', {
 })
 
 export const AccordionContainer = styled('div', {
-  width: 323,
+  maxWidth: '20.196428571rem',
+  width: '100%',
   height: '100%',
   borderRight: '1px solid $gray200',
 })
@@ -37,7 +38,7 @@ export const AccordionHeader = styled(Accordion.Header, {
 
 export const AccordionTrigger = styled(Accordion.Trigger, {
   all: 'unset',
-  height: 40,
+  height: '2.5rem',
   width: '100%',
   flex: 1,
   display: 'flex',
@@ -74,7 +75,7 @@ const slideUp = keyframes({
 
 export const AccordionContent = styled(Accordion.Content, {
   overflow: 'hidden',
-  backgroundColor: '$gray400',
+  backgroundColor: 'transparent',
 
   '& > div:last-child': {
     p: {
@@ -125,7 +126,7 @@ export const AccordionContentText = styled('div', {
 export const ColumnContent = styled('div', {
   display: 'grid',
   placeItems: 'center',
-  maxWidth: 630,
+  maxWidth: '39.375rem',
   width: '100%',
   height: '100%',
   borderRight: '1px solid $gray200',
@@ -135,7 +136,7 @@ export const Form = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   gap: '1.5rem',
-  maxWidth: 372,
+  maxWidth: '23.25rem',
   width: '100%',
 })
 
@@ -143,7 +144,7 @@ export const Label = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   gap: '0.625rem',
-  fontWeight: 450,
+  fontWeight: '28.125rem',
 })
 
 export const Input = styled('input', {
@@ -166,7 +167,7 @@ export const TextArea = styled('textarea', {
   border: '1px solid $gray200',
   borderRadius: 8,
   resize: 'none',
-  height: 150,
+  height: '9.375rem',
   padding: '0.625rem 0.9375rem',
 
   '&:focus':{
@@ -180,12 +181,12 @@ export const FormAnnotation = styled('span', {
   fontSize: '$xs',
 })
 
-export const SucessMessage = styled('div', {
+export const SuccessMessage = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  maxWidth: 382,
+  maxWidth: '23.875rem',
   width: '100%',
 
   h2: {
@@ -207,14 +208,18 @@ export const SucessMessage = styled('div', {
 export const CodeView = styled('div', {
   display: 'flex',
   flexDirection: 'column',
-  maxWidth: 800,
   width: '100%',
   height: '100%',
   fontSize: '$lg',
   fontWeight: 450,
   lineHeight: '150%',
   paddingLeft: '4rem',
-  paddingTop: 115.27,
+  paddingTop: '7.1875rem',
+
+  '@max1920': {
+    paddingLeft: '2rem',
+    paddingTop: '4rem',
+  },
 
   p: {
     width: '100%',

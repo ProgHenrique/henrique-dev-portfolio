@@ -63,4 +63,8 @@ export const { styled, getCssText, globalCss } = createStitches({
       inputText: '#465E77',
     },
   },
+
+  media: {
+    max1920: '(max-width: 1919px)',
+  }
 })

@@ -7,6 +7,12 @@ export const globalStyles = globalCss({
     boxSizing: 'border-box',
   },
 
+  html: {
+    '@max1920': {
+      fontSize: '0.875rem',
+    },
+  },
+
   body: {
     fontFamily: "'Fira Code', monospace",
     backgroundColor: '$gray800',

@@ -24,7 +24,7 @@ export default function Home(){
                         <p>{'// complete o jogo para continuar'}</p>
                         <p>{'// veja isso no meu Github'}</p>
                         <p>
-                            <span>const</span> <span>githubLink</span> = <span>“</span><a href="https://github.com/ProgHenrique" target="_blank">https://github.com/ProgHenrique</a><span>`&quot;`</span>
+                            <span>const</span> <span>githubLink</span> = <span>&quot;</span><a href="https://github.com/ProgHenrique/henrique-dev-portfolio" target="_blank">github.com/ProgHenrique/portfolio</a><span>&quot;</span>
                         </p>
                     </HeroTextFooter>
                 </HeroText>

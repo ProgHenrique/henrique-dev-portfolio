@@ -3,6 +3,7 @@ import { Food, GameMessageFinished, GameState, Snake, TableGame } from "./styles
 import Button from "../button";
 import { PortfolioContext } from "@/context/portfolio-context";
 import Image from "next/image";
+import { useWindowSize } from "@/hooks/use-window-size";
 
 export default function SnakeGame (){
   const {
@@ -38,6 +39,8 @@ export default function SnakeGame (){
     { x: 15, y: 24 },
   ]
   const [prize, setPrize] = useState(false)
+
+  const isWindow1920 = useWindowSize() >= 1920
   
   return (
     <TableGame >
@@ -91,7 +94,11 @@ export default function SnakeGame (){
             {width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', paddingBottom: '2rem'}}
           >
           <div style={{width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-            <Image src='/patinho.gif' width={150} height={200} alt=""/>
+            <Image 
+              src='/patinho.gif' 
+              width={isWindow1920? 150 : 100} 
+              height={isWindow1920 ? 200 : 150} alt=""
+            />
             <strong style={{color: '#FFFFFF'}}>HAVE A NICE DAY!!!</strong>
           </div>
           <Button  onClick={()=> {
@@ -109,8 +116,6 @@ export default function SnakeGame (){
           }} color='orange'>start-game</Button>
         </div>
       )}
-      
-      
     </TableGame>
   )
 }

@@ -3,8 +3,8 @@ import { styled } from "@/styles/stitches.config";
 
 export const TableGame = styled('div', {
   position: 'relative',
-  width: 240,
-  height: 400,
+  width: '15rem',
+  height: '25rem',
   borderRadius: 10,
   backgroundColor: 'rgba(1, 22, 39, 0.84)',
   display: 'flex',

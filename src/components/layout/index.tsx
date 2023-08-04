@@ -42,8 +42,11 @@ export default function Layout({children}: LayoutProps) {
             <Footer>
                 <FooterBar>
                     <li>find me in:</li>
-                    <li><i className="ri-twitter-fill" style={{fontSize: '1.5rem'}}></i></li>
-                    <li><i className="ri-linkedin-fill" style={{fontSize: '1.5rem'}}></i></li>
+                    <li>
+                        <LinkPage href='https://www.linkedin.com/in/devhenriqueramos/' target="_blank">
+                            <i className="ri-linkedin-fill" style={{fontSize: '1.5rem'}}></i>
+                        </LinkPage>
+                    </li>
                     
                 </FooterBar>
                 <a href="https://github.com/ProgHenrique" target="_blank">

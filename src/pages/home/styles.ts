@@ -6,12 +6,16 @@ export const Section = styled('section', {
   height: '100%',
   paddingLeft: '20.1875rem',
   alignItems: 'center',
+  '@max1920': {
+    justifyContent: 'center',
+    paddingLeft: 0
+  }
 })
 
 export const Hero = styled('div', {
   display: 'flex',
   alignItems: 'center',
-  gap: 130,
+  gap: '8.125rem',
 })
 
 export const HeroText = styled('div',{
@@ -77,21 +81,21 @@ export const HeroTextFooter = styled('div', {
 })
 
 export const HeroGame = styled('div', {
-  width: 530,
-  height: 475,
+  width: '33.125rem',
+  height: '29.6875rem',
   border: '1px solid black',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
   background: 'linear-gradient(to bottom, rgba(35, 123, 109, 1), rgba(67, 217, 173, 0.13))',
   borderRadius: 10,
-  padding: 30,
+  padding: '1.875rem',
   position: 'relative',
 })
 
 export const ConsoleMenu = styled('div', {
   position: 'relative',
-  height: 400,
+  height: '25rem',
 })
 
 export const Controller = styled('div', {
@@ -122,10 +126,10 @@ export const Arrow = styled('button', {
   borderRadius: 10,
   textAlign: 'center',
   lineHeight: 0,
-  width: 50,
-  height: 30,
+  width: '3.125rem',
+  height: '1.875rem',
   cursor: 'pointer',
-  fontSize: 10,
+  fontSize: '0.625rem',
   color: '$white',
 
   variants: {
@@ -157,7 +161,7 @@ export const FoodScore = styled('div', {
 export const FoodScoreBoard = styled('div', {
   display: 'grid',
   gridTemplateColumns: 'repeat(5,10px)',
-  gap: 20,
+  gap: '1.25rem',
   justifyItems: 'center',
   width: 'fit-content',
 })
@@ -166,8 +170,8 @@ export const Food = styled('div', {
   background: '$green100',
   borderRadius: '9999px',
   boxShadow: '0 0 10px #43D9AD',
-  width: 8,
-  height: 8,
+  width: '0.5rem',
+  height: '0.5rem',
 })
 
 export const ButtonSkip = styled(Link, {

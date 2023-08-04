@@ -1,3 +1,4 @@
+import { useWindowSize } from "@/hooks/use-window-size";
 import { Dispatch, ReactNode, SetStateAction, createContext, useCallback, useEffect, useState } from "react";
 
 interface Trail {
@@ -31,6 +32,7 @@ interface PortfolioProviderProps {
   children: ReactNode
 }
 export function PortfolioProvider({children}: PortfolioProviderProps) {
+  const windowSize = useWindowSize()
   const [gameStart, setGameStart] = useState(false)
   const [gameOver, setGameOver] = useState(false)
   const [winner, setWinner] = useState(false)
@@ -61,7 +63,7 @@ export function PortfolioProvider({children}: PortfolioProviderProps) {
   const [initial, setInitial] = useState({x:10, y: 12})
   const [tail, setTail] = useState(18)
   const [snake, setSnake] = useState<Trail[]>(initialSnake);
-  const amountSquaresOnStage = {x:24, y:40}
+  const amountSquaresOnStage = {x:windowSize < 1920 ? 21 :24, y:windowSize < 1920 ? 35 : 40}
   const speed = 1
 
   // when direction change callback function that change direction of the snake

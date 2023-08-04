@@ -3,7 +3,6 @@ import * as Accordion from "@radix-ui/react-accordion";
 import * as Checkbox from '@radix-ui/react-checkbox'
 import * as AlertDialog from '@radix-ui/react-alert-dialog';
 import { keyframes } from "@stitches/react";
-import Link from "next/link";
 
 
 export const Section = styled('section', {
@@ -13,7 +12,7 @@ export const Section = styled('section', {
 })
 
 export const AccordionContainer = styled('div', {
-  maxWidth: 323,
+  maxWidth: '20.196428571rem',
   width: '100%',
   height: '100%',
   borderRight: '1px solid $gray200',
@@ -42,7 +41,7 @@ export const AccordionHeader = styled(Accordion.Header, {
 
 export const AccordionTrigger = styled(Accordion.Trigger, {
   all: 'unset',
-  height: 40,
+  height: '2.5rem',
   width: '100%',
   flex: 1,
   display: 'flex',
@@ -212,10 +211,15 @@ export const ProjectCards = styled('div', {
   columnGap: '2.5rem',
   rowGap: '2.5rem',
   padding: '5rem 8.5rem 2.5rem 8.5rem',
+
+  '@max1920': {
+    columnGap: '1.5rem',
+    padding: '5rem 2rem 2.5rem 2rem',
+  }
 })
 
 export const Card = styled('div', {
-  maxWidth: 370,
+  maxWidth: '23.125rem',
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
@@ -238,7 +242,7 @@ export const CardContent = styled('div', {
 })
 
 export const Img = styled('img', {
-  maxHeight: 145,
+  maxHeight: '9.0625rem',
   objectFit: 'cover',
   width: '100%',
   height: '100%',
@@ -258,7 +262,7 @@ export const CardText = styled('div', {
     fontSize: '$lg',
     lineHeight: '150%',
     fontWeight: 450,
-    height: 54,
+    height: '3.375rem',
     overflow: 'hidden',
   }
 })
@@ -299,7 +303,7 @@ export const AlertDialogContent = styled(AlertDialog.Content, {
   width: '90vw',
   maxWidth: '500px',
   maxHeight: '85vh',
-  padding: 25,
+  padding: '1.5625rem',
   animation: `${contentShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
 
   '&:focus': { outline: 'none' },

@@ -118,6 +118,8 @@ export default function Projects() {
     },
   ])
 
+  const unsplashImage = 'https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1548&q=80'
+
   // filter projects visible on screen
   const [projectsData, setProjectsData] = useState<Projects[]>([])
 
@@ -244,7 +246,7 @@ export default function Projects() {
                   <p><strong>Projeto {index + 1}</strong> {'//'} {project.name}</p>
                   <CardContent>
                     <Img 
-                      src={`/images/${project.image}`}
+                      src={project.image ? `/images/${project.image}` : unsplashImage}
                       alt=""
                     />
 

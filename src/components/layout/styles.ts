@@ -9,9 +9,8 @@ export const Screen = styled('div', {
 })
 
 export const Container = styled('div', {
-  maxHeight: 'calc(100vh - 4 * 2)',
-  display: 'flex',
-  flexDirection: 'column',
+  display: 'grid',
+  gridTemplateRows: '3.625rem 1fr 3.625rem',
   backgroundColor: '$gray400',
   width: '100%',
   height: '100%',
@@ -97,9 +96,7 @@ export const LinkPage = styled(Link, {
 })
 
 export const Main = styled('main', {
-  maxHeight: 'calc(100% - 116px)',
-  height: '100%',
-
+  overflow: 'hidden',
 })
 
 export const Footer = styled('div', {
@@ -129,7 +126,7 @@ export const Footer = styled('div', {
 })
 
 export const FooterBar = styled('ul', {
-  maxHeight: 58,
+  maxHeight: '3.625rem',
   height: '100%',
   display: 'flex',
   listStyle: 'none',
