@@ -190,7 +190,7 @@ export const ProjectsColumn = styled('div', {
         }
       }
     }
-  }
+  },
 });
 
 export const Titles = styled('div', {
@@ -215,7 +215,17 @@ export const ProjectCards = styled('div', {
   '@max1920': {
     columnGap: '1.5rem',
     padding: '5rem 2rem 2.5rem 2rem',
-  }
+  },
+
+  '&::-webkit-scrollbar': {
+    width: '6px',
+    backgroundColor: 'transparent',
+  },
+
+  '&::-webkit-scrollbar-thumb': {
+    backgroundColor: '$gray100',
+    borderRadius: '9999px',
+  },
 })
 
 export const Card = styled('div', {
