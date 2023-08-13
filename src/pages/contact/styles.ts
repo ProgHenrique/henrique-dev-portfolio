@@ -162,13 +162,13 @@ export const Input = styled('input', {
 })
 
 export const TextArea = styled('textarea', {
-  all: 'unset',
   background: '$gray600',
   border: '1px solid $gray200',
   borderRadius: 8,
   resize: 'none',
   height: '9.375rem',
   padding: '0.625rem 0.9375rem',
+  outline: 'none',
 
   '&:focus':{
     border: '1px solid $gray100',
@@ -208,12 +208,14 @@ export const SuccessMessage = styled('div', {
 export const CodeView = styled('div', {
   display: 'flex',
   flexDirection: 'column',
+  maxWidth: '52.25rem',
   width: '100%',
   height: '100%',
   fontSize: '$lg',
   fontWeight: 450,
   lineHeight: '150%',
   paddingLeft: '4rem',
+  paddingRight: '1.5rem',
   paddingTop: '7.1875rem',
 
   '@max1920': {
@@ -226,7 +228,6 @@ export const CodeView = styled('div', {
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-
     '& > span:first-child': {
       marginRight: '2.5rem',
     },
